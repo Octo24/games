@@ -37,4 +37,15 @@ window = Tk()
 window.title("Snake game")
 window.resizable(False, False)
 
+score = 0
+direction = 'down'
+
+# create score label
+label = Label(window, text="Score:{}".format(score), font=('consolas', 40))
+label.pack()
+
+# create background (score and background)
+canvas = Canvas(window, bg=BACKGROUND_COLOR, height=GAME_HEIGHT, width=GAME_WIDTH)
+canvas.pack()
+
 window.mainloop()
